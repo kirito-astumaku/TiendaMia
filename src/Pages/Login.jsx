@@ -1,43 +1,40 @@
-import '../styless/REgistro.css'
-import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import '../styless/REgistro.css';
+import { Link } from 'react-router-dom';
+ import { loginUserService } from '../services/userServices';
+import { useAuthContext } from '../hooks/useAuth';
+import { useNavigate } from 'react-router-dom';   
+import { useForm } from 'react-hook-form'; 
 
-function Login() {
-    const onSubmit = async (/* data */) => {
-        /* try {
-          const response = await registerUserService(data)
-          if(response.status === 201) {
-            console.log('User created successfully')
-            navigate('/login')
-          }
-        } catch (error) {
-          console.error('Ocurrio un error al registrar el usuario', error.message)
-        } */
-      }
-
-const {
+function Login2() {
+  const navigate = useNavigate()
+/* 
+  const { login } = useAuthContext() 
+ */
+  const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm()
+  
+  const onSubmit = async (/* data */) => {
+      try {
+      const response = await loginUserService(data)
+      if(response.status === 200) {
+        // Guardamos el token en el localStorage del navegador.
+        // Este dato permanece aún si el navegador se cierra y se vuelve a abrir.
+        login(response.data.token)
+        navigate('/dashboard')
+      }
+    } catch (error) {
+      console.error('Ocurrio un error al iniciar sesión', error.message)
+    }  
+  } 
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} >  
     <section className="form-register">
     <h4>Inicia secion en  TiendaMia </h4>
     {errors.nombres && <span  style={{color: "red"}} >Falta información en el campo</span>}
-   {/*  <div>
-      <input
-     className="controls" 
-     type="text"
-      name="nombres" 
-      id="nombres" 
-      placeholder="Ingrese su Nombre"
-      {...register('nombres', { required: true })}
-      />
-    
-    </div>
-      {errors.correo && <span style={{color: "red"}}>Falta información en el campo</span>} */}
     <input
      className="controls"
       type="email"
@@ -65,5 +62,5 @@ const {
   )
 }
 
-export default Login
+export default Login2
 

@@ -1,5 +1,6 @@
 
-const Homes = () => {
+
+function Porfiles() {
   return (
     <div>
       
@@ -7,4 +8,4 @@ const Homes = () => {
   )
 }
 
-export default Homes
+export default Porfiles

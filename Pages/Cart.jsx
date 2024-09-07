@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { CartContext } from "../context/CartContext"
 import PayOut from "../components/PayOut"
 
-function Carrito1() {
+const Cart = () => {
   const { cart, addProduct, removeProduct } = useContext(CartContext)
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0) //calcula el precio total del carrito
 
@@ -81,4 +81,4 @@ function Carrito1() {
   )
 }
 
-export default Carrito1
+export default Cart

@@ -7,7 +7,7 @@
   body {
     background-image: url('../recursodescargables/fondo.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 500%;
   }
   
   .form-register {
@@ -16,7 +16,7 @@
     padding: 30px;
     margin: auto;
     margin-top: 100px;
-    border-radius: 4px;
+    border-radius: 20px;
     font-family: 'calibri';
     color: white;
     box-shadow: 7px 13px 37px #000;

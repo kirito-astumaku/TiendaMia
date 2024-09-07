@@ -1,11 +1,16 @@
-
+import { useState } from "react"
 import { Link } from 'react-router-dom'
 import './style.css'
+import PropTypes from "prop-types"
 
-function NAvbar(){
+function NAvbar({ setSearchTerm }){
+  const [searchInput, setSearchInput] = useState("")
 
-
-  
+  const handleSearchChange = (event) => {
+    const value = event.target.value.toLowerCase()
+    setSearchInput(value)
+    setSearchTerm(value)
+  }
 
 
   return (
@@ -24,7 +29,7 @@ function NAvbar(){
            className="nav-link active"
            aria-current="page"
 
-            to="/"
+            to="/Home"
           ><h5>Home</h5></Link>
         </li>
         <li className="nav-item">
@@ -67,7 +72,8 @@ function NAvbar(){
         </li>
       </ul>
       <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+        <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" value={searchInput}
+            onChange={handleSearchChange}/>
         <button className="btn btn-outline-success" type="submit">Buscar</button>
       </form>
   
@@ -77,6 +83,9 @@ function NAvbar(){
 </div>
     </div>
   )
+}
+NAvbar.propTypes = {
+  setSearchTerm: PropTypes.func.isRequired
 }
 
 

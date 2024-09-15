@@ -22,10 +22,11 @@ function Login2() {
       if(response.status === 200) {
         login(response.data.token)
         console.log('inicio completdo ')
-        navigate('/Home')
+        navigate('/')
       }
     } catch (error) {
       console.error('Ocurrio un error al iniciar sesión', error.message)
+      document.getElementById('erroe').style.display = 'block'
     }   
   } 
 
@@ -54,6 +55,7 @@ function Login2() {
        
     <input className="botons" type="submit" value="Inicio de secion"/>
     <p><Link to="/Signup">¿No tienes cuenta registrate?</Link></p>
+    <h2 id='erroe' style={{display:'none', textAlign:'center', color:'rgba(255, 0, 0, 0.578)' }}>Error al iniciar secion </h2>
   
 
   </section>

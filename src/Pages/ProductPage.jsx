@@ -11,7 +11,7 @@ const ProductPage = () => {
     const { autenticated } = useAuthContext()
     const navigate = useNavigate()
     const { addProduct } = useContext(CartContext)
-    const placeholderImage = 'https://http.cat/images/500.jpg'
+    const placeholderImage = 'https://www.hubspot.com/hs-fs/hubfs/http-error-500-google.webp?width=650&height=462&name=http-error-500-google.webp'
     const [clickedProduct, setClickedProduct] = useState(null);
 
     const handleClick = (product) => {
@@ -51,9 +51,9 @@ const ProductPage = () => {
             onError={handleImageError}
             />
             <br />
-            <strong>Price: ${product.price}</strong>
+            <h3>{product.description}</h3>
             <br />
-            <strong>{product.description}</strong>
+            <h3>Price: ${product.price}</h3>
             <br />
             {autenticated ? (
                 <>

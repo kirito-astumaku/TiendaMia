@@ -6,13 +6,14 @@ import { CartContext } from '../context/CartContext'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { ProductContext } from '../context/ProductContext'
 import HomeCart from '../components/HomeCart'
+import '../styless/homes.css';
 
 const Homes = ({ searchTerm = '' }) => {
     const { products } = useContext(ProductContext)//trae todos los productos
     const { autenticated } = useAuthContext()//trae el estado de autenticacion
     const { addProduct, cart } = useContext(CartContext)//trae el estado del carrito para agrega los productos
     const navigate = useNavigate()//para redireccionar
-    const placeholderImage = 'https://http.cat/images/500.jpg'
+    const placeholderImage = 'https://www.hubspot.com/hs-fs/hubfs/http-error-500-google.webp?width=650&height=462&name=http-error-500-google.webp'
     
 
     const [clickedProduct, setClickedProduct] = useState(null);
@@ -46,6 +47,7 @@ const Homes = ({ searchTerm = '' }) => {
             ) : (
                 filtered.map((product, id) => (//utiliza la funcion de filtrado para renderizar los productos, si no hay termino de busqueda renderiza todos los productos
                     <div
+                        id='padre'
                         className='card shadow-lg p-3 mb-5 bg-body-secondary rounded d-flex flex-column'
                         style={{ width: "15.7rem" }}
                         key={id}
@@ -78,7 +80,7 @@ const Homes = ({ searchTerm = '' }) => {
                             ) : (
                                 <button
                                     onClick={() => navigate("/login")}
-                                    className='btn btn-primary'>
+                                     className='btn btn-primary' id='botones21'>
                                     Login or signup to add to cart
                                 </button>
                             )}

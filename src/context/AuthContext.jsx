@@ -7,37 +7,36 @@ const AuthContext = createContext()
 
 const AuthProvider = ({ children }) => {
 
-    const [isAuth, setIsAuth] = useState(false) 
-    const [userPayload, setUserPayload] = useState(null) 
+    const [autenticated, setAutenticated] = useState(false)
+    const [userPayload, setUserPayload] = useState(null)
 
     const login = (jwtToken) => {
         localStorage.setItem('token', jwtToken)
         const payload = jwtDecode(jwtToken)
-        setIsAuth(true)
+        setAutenticated(true)
         setUserPayload(payload)
     }
 
     const logout = () => {
         localStorage.removeItem('token')
-        setIsAuth(false)
+        setAutenticated(false)
         setUserPayload(null)
     }
 
-    useEffect(()=>{
+    useEffect( ()=> {
         const token = localStorage.getItem('token')
-        if(token){
+        if(token) {
             const payload = jwtDecode(token)
-            setIsAuth(true)
+            setAutenticated(true)
             setUserPayload(payload)
         }
     },[])
 
     const data = {
- 
-        isAuth,
+        autenticated,
         userPayload,
         login,
-        logout
+        logout,
     }
     return(
         <AuthContext.Provider value={data}>

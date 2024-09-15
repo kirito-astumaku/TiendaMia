@@ -7,7 +7,7 @@ const PayOut = () => {
               <div className="row">
                 <div className="col-sm-6">
                   <label htmlFor="firstName" className="form-label">
-                    First name
+                    Nombre
                   </label>
                   <input
                     type="text"
@@ -18,12 +18,12 @@ const PayOut = () => {
                     required=""
                   />
                   <div className="invalid-feedback">
-                    Valid first name is required.
+                     EL Nombre tiene que ser valido
                   </div>
                 </div>
                 <div className="col-sm-6">
                   <label htmlFor="lastName" className="form-label">
-                    Last name
+                    Apellido
                   </label>
                   <input
                     type="text"
@@ -34,12 +34,12 @@ const PayOut = () => {
                     required=""
                   />
                   <div className="invalid-feedback">
-                    Valid last name is required.
+                  EL Apellido tiene que ser valido
                   </div>
                 </div>
                 <div className="col-12">
                   <label htmlFor="username" className="form-label">
-                    Username
+                    Usuario
                   </label>
                   <div className="input-group has-validation">
                     <span className="input-group-text">@</span>
@@ -51,13 +51,13 @@ const PayOut = () => {
                       required=""
                     />
                     <div className="invalid-feedback">
-                      Your username is required.
+                    EL Usuario tiene que ser valido
                     </div>
                   </div>
                 </div>
                 <div className="col-12">
                   <label htmlFor="email" className="form-label">
-                    Email <span className="text-body-secondary">(Optional)</span>
+                    Email <span className="text-body-secondary">(Opcional)</span>
                   </label>
                   <input
                     type="email"
@@ -66,12 +66,12 @@ const PayOut = () => {
                     placeholder="you@example.com"
                   />
                   <div className="invalid-feedback">
-                    Please enter a valid email address for shipping updates.
+                  Ingrese una dirección de correo electrónico válida
                   </div>
                 </div>
                 <div className="col-12">
                   <label htmlFor="address" className="form-label">
-                    Address
+                   Dirección
                   </label>
                   <input
                     type="text"
@@ -81,12 +81,12 @@ const PayOut = () => {
                     required=""
                   />
                   <div className="invalid-feedback">
-                    Please enter your shipping address.
+                  Ingrese una dirección  válida
                   </div>
                 </div>
                 <div className="col-12">
                   <label htmlFor="address2" className="form-label">
-                    Address 2{" "}
+                  Dirección  2{" "}
                     <span className="text-body-secondary">(Optional)</span>
                   </label>
                   <input
@@ -98,11 +98,13 @@ const PayOut = () => {
                 </div>
                 <div className="col-md-5">
                   <label htmlFor="country" className="form-label">
-                    Country
+                    Continente
                   </label>
                   <select className="form-select" id="country" required="">
-                    <option value="">Choose...</option>
-                    <option>United States</option>
+                    <option value="">Selecciona...</option>
+                    <option>America</option>
+                    <option>Europa</option>
+                    <option>Asia</option>
                   </select>
                   <div className="invalid-feedback">
                     Please select a valid country.
@@ -110,11 +112,24 @@ const PayOut = () => {
                 </div>
                 <div className="col-md-4">
                   <label htmlFor="state" className="form-label">
-                    State
+                    País
                   </label>
                   <select className="form-select" id="state" required="">
-                    <option value="">Choose...</option>
-                    <option>California</option>
+                    <option value="">Selecciona...</option>
+                    <option>Estados unidos</option>
+                    <option>Mexico</option>
+                    <option>Costa rica</option>
+                    <option>Colombia</option>
+                    <option>España</option>
+                    <option>Francia</option>
+                    <option>Alemania</option>
+                    <option>Portugal</option>
+                    <option>China</option>
+                    <option>Rusia</option>
+                    <option>Japon</option>
+                    <option>Corea del sur</option>
+                    
+
                   </select>
                   <div className="invalid-feedback">
                     Please provide a valid state.
@@ -134,31 +149,33 @@ const PayOut = () => {
                   <div className="invalid-feedback">Zip code required.</div>
                 </div>
               </div>
-              <hr className="my-4" />
+              {/* <hr className="my-4" /> */}
               <div className="form-check">
-                <input
+                {/* <input
                   type="checkbox"
                   className="form-check-input"
-                  id="same-address"
-                />
-                <label className="form-check-label" htmlFor="same-address">
+                  id="same-address" 
+                /> */}
+                {/*  <label className="form-check-label" htmlFor="same-address">
                   Shipping address is the same as my billing address
-                </label>
+                </label> */}
               </div>
               <div className="form-check">
-                <input
+                {/* <input
                   type="checkbox"
                   className="form-check-input"
-                  id="save-info"
-                />
-                <label className="form-check-label" htmlFor="save-info">
+                  id="save-info" 
+                />*/}
+                {/* <label className="form-check-label" htmlFor="save-info">
                   Save this information for next time
-                </label>
-              </div>
-              <hr className="my-4" />
+                </label> */} 
+               </div>
+              {/* <hr className="my-4" /> */}
+              <h3 >Metodo de Pago</h3>
+
               <h4 className="mb-3">Payment</h4>
               <div className="my-3">
-                <div className="form-check">
+                <div className="form-check"> 
                   <input
                     id="credit"
                     name="paymentMethod"
@@ -168,7 +185,7 @@ const PayOut = () => {
                     required=""
                   />
                   <label className="form-check-label" htmlFor="credit">
-                    Credit card
+                    Trajeta de Credito
                   </label>
                 </div>
                 <div className="form-check">
@@ -180,7 +197,7 @@ const PayOut = () => {
                     required=""
                   />
                   <label className="form-check-label" htmlFor="debit">
-                    Debit card
+                    Trajeta de Debito
                   </label>
                 </div>
 
@@ -188,7 +205,7 @@ const PayOut = () => {
               <div className="row gy-3">
                 <div className="col-md-6">
                   <label htmlFor="cc-name" className="form-label">
-                    Name on card
+                    Name de la trajeta
                   </label>
                   <input
                     type="text"
@@ -204,7 +221,7 @@ const PayOut = () => {
                 </div>
                 <div className="col-md-6">
                   <label htmlFor="cc-number" className="form-label">
-                    Credit card number
+                   Numero de la trajeta
                   </label>
                   <input
                     type="text"
@@ -219,10 +236,10 @@ const PayOut = () => {
                 </div>
                 <div className="col-md-3">
                   <label htmlFor="cc-expiration" className="form-label">
-                    Expiration
+                    Codigo de seguridad
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     className="form-control"
                     id="cc-expiration"
                     placeholder=""
@@ -232,10 +249,10 @@ const PayOut = () => {
                 </div>
                 <div className="col-md-3">
                   <label htmlFor="cc-cvv" className="form-label">
-                    CVV
+                   Fecha de Vencimiento 
                   </label>
                   <input
-                    type="text"
+                    type="month"
                     className="form-control"
                     id="cc-cvv"
                     placeholder=""
@@ -246,7 +263,7 @@ const PayOut = () => {
               </div>
               <hr className="my-4" />
               <button className="w-100 btn btn-primary btn-lg" type="submit">
-                Proseed the payment
+                Procesando Pago⭐
               </button>
             </form>
           </div>

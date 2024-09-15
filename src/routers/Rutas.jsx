@@ -17,7 +17,7 @@ function Rutas({searchTerm}) {
       <Routes>
        <Route path="/Signup" element={<Sinlogin1/>}/>,
        <Route path="/Login" element={<Login2/>}/>,
-       <Route path="/Home" element={<Homes/>}/>,
+       <Route path="/" element={<Homes searchTerm={searchTerm} />}/>,
        <Route path="/Perfil" element={<Porfiles/>}/>,
        <Route path="/Carrito" element={autenticated ?<Carrito1/> : <Navigate to ="/login" />}/>,
        <Route path='/product/:id' element={<ProductPage />} />

@@ -1,12 +1,12 @@
 
-
-#padre{
+#padre1{
     font-size: 19px;
     padding: 0.5%;
-    background-color: rgba(0, 0, 0, 0.318);
+    /* background-color: rgba(0, 0, 0, 0.318); */
     padding: 1%;
-    
+    border-radius:20px ;
 }
+
 
 
 a:hover{

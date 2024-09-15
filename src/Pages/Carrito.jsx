@@ -13,14 +13,14 @@ function Carrito1() {
         <main className="border">
           <div className="row g-5 text-center">
 
-            <h2>Checkout</h2>
+            <h2>Productos</h2>
 
           </div>
           
           <div className="row g-5">
             <div className="col-md-5 col-lg-4 order-md-last">
               <h4 className="d-flex justify-content-between align-items-center mb-3">
-                <span>Your cart</span>
+                <span>Tu carrito</span>
                 <span className="badge bg-primary rounded-pill">{cart.reduce((total, item) => total + item.quantity, 0)}</span> {/* calcula el total de productos */}
               </h4>
               <ul className="list-group mb-3">

@@ -11,7 +11,6 @@ function Sinlogin1() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm()
 

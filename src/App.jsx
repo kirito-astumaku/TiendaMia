@@ -6,6 +6,7 @@ import { AuthProvider } from './context/AuthContext'
 import { ProductProvider } from './context/ProductContext'
 import { CartProvider } from './context/CartContext'
 import { useState } from 'react'
+import './app.css';
 
 
 function App() {

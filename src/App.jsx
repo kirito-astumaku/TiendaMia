@@ -2,7 +2,6 @@
 import NAvbar from "./components/NAvbar";
 import { BrowserRouter } from 'react-router-dom';
 import Rutas from "./routers/Rutas";
-import './app.css'
 import { AuthProvider } from './context/AuthContext'
 import { ProductProvider } from './context/ProductContext'
 import { CartProvider } from './context/CartContext'

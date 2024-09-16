@@ -1,0 +1,28 @@
+
+.padre123{
+    position: absolute;
+    top: 20%;
+    right: 35%;
+    background-color: white;
+    padding: 2%;
+    border-radius: 20px;
+}
+.data243{
+    background-color: rgba(0, 0, 0, 0.333);
+    width: 100%;
+    color: rgb(11, 56, 124);
+    text-align: center;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 800px) 
+{
+    .padre123{
+        position: relative;
+        top: 27%;
+        right: 1%;
+        background-color: white;
+        padding: 2%;
+        border-radius: 20px;
+    }
+}

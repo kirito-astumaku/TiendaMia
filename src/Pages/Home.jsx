@@ -49,7 +49,7 @@ const Homes = ({ searchTerm = '' }) => {
                     <div
                         id='padre'
                         className='card shadow-lg p-3 mb-5 bg-body-secondary rounded d-flex flex-column'
-                        style={{ width: "15.7rem" }}
+                        style={{ width: "15.7rem",  }}
                         key={id}
                     >
                         <NavLink

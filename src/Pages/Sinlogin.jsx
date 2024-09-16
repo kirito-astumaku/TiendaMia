@@ -88,6 +88,22 @@ function Sinlogin1() {
    placeholder="Ingrese su Contraseña"
    {...register("password", { required: true })}
    />
+
+{errors.role && <span>This field is required</span>}
+<div className='form-floating'>
+        <select
+          className='form-select'
+          id='role'
+          name='role'
+          {...register('role', { required: true })}
+        >
+          <option value=''>Select role</option>
+          <option value='COSTUMER'>costumer</option>
+          <option value='ADMIN'>admin</option>
+        </select>
+        <label htmlFor='role'>role</label>
+      </div>
+      <br />
    
 
       <button className='w-100 btn btn-lg btn-primary' type='submit'>Sign up</button>

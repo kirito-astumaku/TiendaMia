@@ -38,11 +38,13 @@ const AuthProvider = ({ children }) => {
         login,
         logout,
     }
-    return(
+
+    return (
         <AuthContext.Provider value={data}>
             {children}
         </AuthContext.Provider>
     )
-}
 
-export { AuthContext, AuthProvider }
+
+}
+export {AuthContext, AuthProvider}

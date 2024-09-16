@@ -9,6 +9,14 @@
     background-repeat: no-repeat;
     background-size: 500%;
   }
+  @media screen and (max-width: 800px) 
+{
+  body {
+    background-image: url('../recursodescargables/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: 10000%;
+  }
+}
   
   .form-register {
     width: 400px;

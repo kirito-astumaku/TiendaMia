@@ -6,3 +6,12 @@
 #botones21{
     background-color: green;
 }
+
+
+@media screen and (max-width: 800px) 
+{
+    #padre{
+        margin-left: 15% ;
+        
+    }
+}

@@ -10,7 +10,7 @@ import { getMyUserService } from "../services/userServices"
 
 function NAvbar({ setSearchTerm }){
   const [searchInput, setSearchInput] = useState("")
-  const { logout, autenticated/* , userPayload  */} = useAuthContext()
+  const { logout, autenticated,userPayload  } = useAuthContext()
   const [user, setUser] = useState("")
 
   useEffect(() => {
@@ -39,7 +39,6 @@ function NAvbar({ setSearchTerm }){
     setSearchInput(value)
     setSearchTerm(value)
   }
-
 
   
 
@@ -75,6 +74,20 @@ function NAvbar({ setSearchTerm }){
 
         <li><hr className="dropdown-divider" /></li>
         <li><NavLink className="dropdown-item" to="/" onClick={logout} style={{background:"none" , color:"black"}} >Cerrar sesión</NavLink></li>
+        {userPayload?.role == 'ADMIN' && ( 
+                     <> 
+                  <hr className="dropdown-divider" />
+                    <li className="header__list-item">
+                       <NavLink 
+                        to="/secret"
+                        className="dropdown-item"
+                         class={({ isActive }) => linkIsActive(isActive)}> 
+                        Product manager
+                     </NavLink> 
+
+                    </li>
+                    </> 
+                   )} 
       </ul>
     </li>
     <li className="nav-item">
@@ -82,6 +95,8 @@ function NAvbar({ setSearchTerm }){
         <h5>Carrito</h5>
       </Link>
     </li>
+    
+    
   </>
 ) : 
 (
@@ -106,6 +121,7 @@ function NAvbar({ setSearchTerm }){
             
           </NavLink>
         </li>
+
       
   </>
 
